@@ -18,8 +18,8 @@ FROM amazoncorretto:17
 
 ##FROM openjdk:17-jre-alpine
 
-VOLUME /student-service
+VOLUME /teacher-service
 
-COPY --from=build /microservices/target/*.jar student-service.jar
+COPY --from=build /microservices/target/*.jar teacher-service.jar
 
-ENTRYPOINT ["java","-jar","student-service.jar"]
+ENTRYPOINT ["java","-jar","teacher-service.jar"]
